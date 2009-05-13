@@ -27,13 +27,13 @@
     <li>
     <form  action='<?php echo url_for('account/dump') ?>' method="POST">
         <?php echo new sfForm(); ?>
-        <input type='submit' value='Export Data'>
+        <input type='submit' value='Export Data !REPLACE WITH JAVASCRIPT!'>
     </form>
     </li>
     <li>
     <form action='<?php echo url_for('account/restore') ?>' method="POST" enctype="multipart/form-data">
         <?php echo new RestoreForm(); ?>
-        <input type='submit' value='Import Data'>
+        <input type='submit' value='Import Data !REPLACE WITH JAVASCRIPT!'>
     </form>
     </li>
 </ul>

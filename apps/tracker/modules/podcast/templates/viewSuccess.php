@@ -34,15 +34,13 @@
         </li>
       <?php endforeach; ?>
     </ul>
-  <?php else: ?>
-    <p><i>No episodes yet.</i></p>
   <?php endif; ?>
 <?php slot('feed');
 foreach($feeds as $feed)  foreach($feed->getUris() as $format => $uri) 
 {
   echo auto_discovery_link_tag ('rss',$uri,Array(
     'title'=>($feed->getTitle()=='default'?'':$feed->getTitle().' ').'via '.$format,
-  ));
+  )); // Not sure about via format above, please check
 }
 end_slot();
 ?>

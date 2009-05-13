@@ -3,7 +3,7 @@
 	<td>
 		<div class="form-field">
 			<?php echo $form['title'] ?>
-			<p>Becomes <span class="perm-preview">(empty)</span> in RSS feed URLs</p>
+			<p>Podcast title, like: The Show<br>Becomes <span class="perm-preview">-</span> in RSS feed URLs</p>
 			<?php echo $form['title']->renderError() ?>
 		</div>
 		<script type="text/javascript">
@@ -15,27 +15,13 @@
 		</div>
 	</td>
 </tr>
-<tr id="slug_row">
-	<th><?php echo $form['slug']->renderLabel() ?></th>
-	<td>
-		<div class="form-field">
-			<?php echo $form['slug'] ?>
-			<p>Used in urls. example of url here todo</p>
-			<?php echo $form['slug']->renderError() ?>
-		</div>
-		<div class="value">
-			<?php echo $form['slug']->getValue() ?>
-			<a href="#" class="edit-button">edit</a>
-		</div>
-	</td>
-</tr>
 <tr id="image_row">
 	<th>Cover</th>
 	<td>
 		<div class="form-field">
 			<?php echo $form['image_url']->renderError() ?>
 			<?php echo $form['image_url'] ?>
-			<p>Podcast cover art.  Recommended size is at least 300x300.</p>
+			<p>Podcast cover art, URL to a JPG 300 pixels square or bigger</p>
 		</div>
 		<div class="value">
 			<?php echo $form['image_url']->getValue() ?>
@@ -91,7 +77,7 @@
 	<td>
 		<div class="form-field">
 			<?php echo $form['link'] ?>
-			<p>This contains an optional url that your podcast will link back to.</p>
+			<p>Your website for this podcast, like: http://www.example.com/theshow</p>
 			<?php echo $form['link']->renderError() ?>
 		</div>
 		<div class="value">
@@ -105,6 +91,7 @@
 	<td>
 		<div class="form-field">
 			<?php echo $form['description'] ?>
+			<p>A paragraph that describes your podcast</p>
 			<?php echo $form['description']->renderError() ?>
 		</div>
 		<div class="value">

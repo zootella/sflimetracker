@@ -1,5 +1,5 @@
 <?php if($form['image_url']->getValue())
-    echo image_tag($form['image_url']->getValue()),'<br>' ?>
+    echo image_tag($form['image_url']->getValue(), 'size=300x300'),'<br>' ?>
 <?php page_title($podcast->getTitle()) ?>
 
 <div class="delete-form-wrapper">
@@ -63,8 +63,6 @@
             ' - '.$episode->getTitle(),'episode', 'episode/edit?id='.$episode->getId()) ?>
         </li>
       <?php endforeach; ?>
-  <?php else: ?>
-    <p><i>No episodes yet.</i></p>
   <?php endif; ?>
   <?php
     if(true) // TODO add !Podcast->isFeedBased() here

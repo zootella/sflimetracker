@@ -1,4 +1,3 @@
-<?php page_title('Set Password and Login','h2') ?>
 <div class="form-wrapper login">
   <form action="<?php echo url_for('@first_run') ?>" method="POST">
     <table>
@@ -37,7 +36,7 @@
         </tr>
       <tr>
         <td>&nbsp;</td>
-        <td><input type="submit" value="Sign in" /></td>
+        <td><input type="submit" value="Sign In" /></td>
       </tr>
     </table>
   </form>

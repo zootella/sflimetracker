@@ -3,7 +3,7 @@
 	<td>
 		<div class="form-field">
 			<?php echo $form['title'] ?>
-			<p>Becomes <span class="perm-preview">(empty)</span> in torrent filenames</p>
+			<p>Becomes <span class="perm-preview">-</span> in torrent filenames</p>
 			<?php echo $form['title']->renderError() ?>
 		</div>
 		<script type="text/javascript">
@@ -15,16 +15,16 @@
 		</div>
 	</td>
 </tr>
-<tr id="slug_row">
-	<th><?php echo $form['slug']->renderLabel() ?></th>
+<tr>
+	<th>Date</th>
 	<td>
 		<div class="form-field">
-			<?php echo $form['slug'] ?>
-			<p>Used in the episode address</p>
-			<?php echo $form['slug']->renderError() ?>
+			<?php echo $form['created_at'] ?>
+			<p>Episode date and time, like: 2008-12-25 13:34:00, blank for now</p>
+			<?php echo $form['created_at']->renderError() ?>
 		</div>
 		<div class="value">
-			<?php echo $form['slug']->getValue(); ?>
+			<?php echo $form['created_at']->getValue(); ?>
 			<a href="#" class="edit-button">edit</a>
 		</div>
 	</td>
@@ -34,25 +34,11 @@
 	<td>
 		<div class="form-field">
 			<?php echo $form['length'] ?>
-			<p>Duration of the episode, like: 25:14 (which equals 25 minutes, 14 seconds)</p>
+			<p>Episode duration in hours, minutes and seconds like: 0:40:27</p>
 			<?php echo $form['length']->renderError() ?>
 		</div>
 		<div class="value">
 			<?php echo $form->getObject()->getFormattedLength(); ?>
-			<a href="#" class="edit-button">edit</a>
-		</div>
-	</td>
-</tr>
-<tr>
-	<th>Date</th>
-	<td>
-		<div class="form-field">
-			<?php echo $form['created_at'] ?>
-			<p>Creation date, like: 2008-12-25 13:34:00</p>
-			<?php echo $form['created_at']->renderError() ?>
-		</div>
-		<div class="value">
-			<?php echo $form['created_at']->getValue(); ?>
 			<a href="#" class="edit-button">edit</a>
 		</div>
 	</td>
